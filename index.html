@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow" rel="stylesheet"> 
+  <title>Jogo JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- tela principal -->
+  <div>    
+    <canvas id="game"></canvas>
+    <span id="score">0</span>
+  </div>
+  
+  <!-- menu -->
+  <div id="game-menu">
+    <h1 id="msg">Alien Rush</h1>
+    <h2 id="hi-score">Use o click do mouse para jogar</h2>
+    <button type="button" id="btn-start">
+      Jogar!
+    </button>
+  </div>
+
+  <footer>
+    desenvolvido por 
+    <a href="#">Bruno Mendes</a>
+
+    <br>
+    <p>creditos terceiros: </p>    
+    musica de fundo:
+    <a href="https://www.bensound.com"> Bensond</a>,
+    Sprites e musica de gameover:
+    <a href="https://kenney.nl/">Kenney</a>
+  </footer>
+
+  <!-- scripts desenvolvimento -->  
+  <!-- <script src="src/assets.js"></script>
+  <script src="src/character.js"></script>
+  <script src="src/obstacles.js"></script>
+  <script src="src/engine.js"></script>  
+  <script src="src/main.js"></script> -->
+
+  <!-- script gerado por gulp  -->  
+  <script src="gameProd.min.js"></script> 
+</body>
+</html>
