@@ -2,6 +2,10 @@
 
 jogo simples com javascript es6 e html (canvas).
 
+Scrennshot: 
+
+![](screenshot.png)
+
 ## jogar:
 clone ou baixe e extraia o repositorio e abra o index.html
 
