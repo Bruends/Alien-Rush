@@ -2,7 +2,7 @@
 
 jogo simples com javascript es6 e html (canvas).
 
-Scrennshot: 
+Screenshot: 
 
 ![](screenshot.png)
 
