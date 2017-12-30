@@ -4,7 +4,7 @@ jogo simples com javascript es6 e html (canvas).
 
 Screenshot: 
 
-![](screenshot.png)
+![alien rush](alienrush.gif)
 
 ## jogar:
 clone ou baixe e extraia o repositorio e abra o index.html

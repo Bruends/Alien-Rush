@@ -3,27 +3,26 @@ class Obstacles
   constructor(){
     this.obstaclesInScreen = [];
     this.spawnTime = 1;    
+    // sprite
     this.image = new Image();
     this.image.src = 'images/obstacle.png';
   }
 
-  spawn(context){
-    if(this.spawnTime <= 0){
-      this.obstaclesInScreen.push({
-        x: 600,
-        y: randomInt(10,600),
-        width: 43,
-        height: 43,
-        movingSpeed: randomInt(7, 9)
-     })
-    }
-  } 
+  spawnObstacle(context){       
+    this.obstaclesInScreen.push({
+      x: 600,
+      y: randomInt(10,600),
+      width: 43,
+      height: 43,
+      movingSpeed: randomInt(8, 11)
+    })
+  }   
   
   updateObstaclesInScreen(){
-    //adicionando novos obstaculos na tela
-    if(this.spawnTime <= 0){
-      this.spawn();
-      this.spawnTime = 13;
+    // adicionando novos obstaculos na tela
+    if(this.spawnTime <= 0){     
+        this.spawnObstacle();
+        this.spawnTime = 10;     
     } else {
       this.spawnTime--;
     }
@@ -45,6 +44,5 @@ class Obstacles
     for(let obstacle of this.obstaclesInScreen){  
       context.drawImage(img, obstacle.x, obstacle.y);
     }
-  }
-  
+  }  
 }

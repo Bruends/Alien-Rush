@@ -13,9 +13,9 @@ window.onload = function(){
   engine.setControlls();
 
   // roda o jogo em loop
-  const runGame = function(){       
-     window.requestAnimationFrame(runGame);
-     engine.run();    
+  const runGame = function(){      
+   window.requestAnimationFrame(runGame) 
+   engine.run();    
   }
   
   playBackgoudMusic();

@@ -8,6 +8,7 @@ class Character
     this.gravity = gravity;
     this.fly_force = fly_force;
     this.mousePressed = false;
+    // sprite
     this.img = new Image();
     this.img.src = "images/character.png";
   }
@@ -20,6 +21,8 @@ class Character
     this.y += this.gravity;    
   }
 
+  // alterna entre voando e caindo
+  // dependendo se o botão do mouse está pressionado ou não
   action(){
     if(this.mousePressed){
       this.fly();

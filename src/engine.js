@@ -41,7 +41,7 @@ class Engine
     // verificando recorde
     if( this.score > this.hiScore ) {  this.hiScore = this.score  }
     
-    this.hiScoreSpan.textContent = `Recorde:  ${this.hiScore}`;
+    this.hiScoreSpan.textContent = `Record:  ${this.hiScore}`;
 
     playGameOverMusic();
     
@@ -71,13 +71,13 @@ class Engine
       this.gameOver();
     }
 
-    //obstaculos
+    // obstaculos
     const character = this.character;
     const obstaclesInScreen = this.obstacles.obstaclesInScreen;     
     for(let obstacle of obstaclesInScreen){  
-      //checando se o obstaculo alcançou o personagem    
+      // checando se o obstaculo alcançou o personagem    
       if(character.x >= obstacle.x) {
-        //checando colisão vertical 
+        // checando colisão vertical 
         if(character.y >= obstacle.y && character.y <= (obstacle.y + obstacle.height)
           || (character.y + character.height) >= obstacle.y && (character.y + character.height) <= (obstacle.y + obstacle.height)){
           this.gameOver();
@@ -100,7 +100,7 @@ class Engine
       this.movingBgPos = 0;
     }
 
-    //personagem e obstaculos    
+    // personagem e obstaculos    
     if(this.playing) {
       this.character.draw(this.context);
       this.obstacles.draw(this.context);
@@ -110,7 +110,7 @@ class Engine
   run(){
     this.draw();
 
-    //jogo rodando
+    // jogo rodando
     if(this.playing){
       this.character.action();          
       this.obstacles.updateObstaclesInScreen();
@@ -121,5 +121,4 @@ class Engine
       this.score++;      
     }
   }
-
 }

@@ -10,7 +10,7 @@ const image = require('gulp-image');
 gulp.task('compress-js', () =>{
    gulp.src('./src/*.js')
   .pipe(concat('gameProd.min.js'))
-  .pipe(babel({ presets: ['env'] }))
+  .pipe(babel({ presets: ['env'] }).on('error', (err) => console.log(err)))
   .pipe(uglify())
   .pipe(gulp.dest('./'))
 });
